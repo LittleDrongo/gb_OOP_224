@@ -31,7 +31,7 @@ public class Drugmain {
 
         System.out.println(components);
 
-        Collections.sort(components);
+        Collections.sort(components,Comparator.reverseOrder());
         System.out.println(components);
 
 //        Iterator<Component> iterator = p1;
