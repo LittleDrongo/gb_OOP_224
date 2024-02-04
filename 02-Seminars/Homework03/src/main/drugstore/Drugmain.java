@@ -14,14 +14,18 @@ public class Drugmain {
         Component penicillin = new Penicillin("penicillin", 1.6D, 6);
 
 
-        PharmacyTwo p1 = new PharmacyTwo();
+        Pharmacy p1 = new Pharmacy();
         p1.addComponents(water, azitronite);
 
-        PharmacyTwo p2 = new PharmacyTwo();
+        Pharmacy p2 = new Pharmacy();
         p2.addComponents(penicillin, water);
 
-        PharmacyTwo p3 = new PharmacyTwo();
-        p3.addComponents(azitronite, penicillin);
+        Pharmacy p3 = new Pharmacy();
+        p3.addComponents(azitronite, penicillin, water);
+
+        Pharmacy p4 = new Pharmacy();
+        p4.addComponents(azitronite, penicillin, water, penicillin);
+
 
         List<Component> components = new ArrayList<>();
 
@@ -34,14 +38,27 @@ public class Drugmain {
         Collections.sort(components,Comparator.reverseOrder());
         System.out.println(components);
 
-//        Iterator<Component> iterator = p1;
-//        while (iterator.hasNext()) {
-//            System.out.println(p1.next().toString());
-//        }
+        System.out.println("----------[ Домашнее задание ]----------------------");
 
-//        for (Component c : p2) {
-//            System.out.println(c);
-//        }
+        List<Pharmacy> pharmacys = new ArrayList<>();
+        pharmacys.add(p4);
+        pharmacys.add(p1);
+        pharmacys.add(p2);
+        pharmacys.add(p3);
 
+
+        System.out.println(pharmacys);
+
+        System.out.println("----------[ До сортировки Pharmacy ]----------------------");
+        for (Pharmacy pharmacy : pharmacys) {
+            System.out.println(pharmacy);
+        }
+
+        Collections.sort(pharmacys);
+
+        System.out.println("-------------[ После сортировки Pharmacy]-------------------");
+        for (Pharmacy pharmacy : pharmacys) {
+            System.out.println(pharmacy);
+        }
     }
 }

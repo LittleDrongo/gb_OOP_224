@@ -5,6 +5,10 @@ public abstract class Component implements Comparable<Component> {
     private Double weight;
     private int power;
 
+    public int getPower() {
+        return power;
+    }
+
     public Component(String title, Double weight, int power) { //ALT + Insert
         this.title = title;
         this.weight = weight;
@@ -21,13 +25,6 @@ public abstract class Component implements Comparable<Component> {
 //  return this.power - o.power;
         return Integer.compare(this.power, o.power);
 
-//    if(this.power < o.power){
-//        return -1;
-//    }
-//    else if (this.power > o.power){
-//        return 1;
-//    }
-//    else return 0;
 
     }
 }
