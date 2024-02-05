@@ -1,6 +1,6 @@
-package list.impl;
+package list.core.impl;
 
-import list.ArrayIterator;
+import list.core.util.ArrayIterator;
 import list.GBList;
 
 import java.util.Iterator;

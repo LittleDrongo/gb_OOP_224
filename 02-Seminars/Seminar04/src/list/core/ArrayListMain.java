@@ -1,6 +1,7 @@
-package list.impl;
+package list.core;
 
 import list.GBList;
+import list.core.impl.GBArrayList;
 
 public class ArrayListMain {
     public static void main(String[] args) {
