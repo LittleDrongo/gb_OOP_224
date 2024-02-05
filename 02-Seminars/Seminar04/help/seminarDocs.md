@@ -1,0 +1,1 @@
+List<Object> l = new ArrayList<>(); // Это говно
