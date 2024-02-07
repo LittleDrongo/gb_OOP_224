@@ -37,12 +37,15 @@ public class GBLinkedList <T> implements GBLinkedL<Object> {
 //        values[size++] = value;
     }
 
-    public void print(){
+    public void printList(){
         GBNode temp = head;
 
+        int i = 0;
+
         while (temp != null){
-            System.out.println(temp.item);
+            System.out.println("идекс: " + i + " элемент: " + temp.item);
             temp = temp.next;
+            i++;
         }
     }
 
@@ -68,7 +71,7 @@ public class GBLinkedList <T> implements GBLinkedL<Object> {
     @Override
     public T get(int index) {
         if (index < 0 || index >= size){
-            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+            throw new IndexOutOfBoundsException("индекс: " + index + ", размер: " + size);
         }
 
         GBNode current = head;

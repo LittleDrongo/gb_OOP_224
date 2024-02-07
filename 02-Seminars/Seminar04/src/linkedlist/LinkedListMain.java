@@ -15,11 +15,13 @@ public class LinkedListMain {
         list.addFirst(10);
         list.addFirst(20);
         list.addFirst(30);
-        list.addLast(3);
+        list.addLast(999);
 
-        list.print();
+        list.printList();
 
-        System.out.println("Size is: " + list.size());
+        System.out.println("Размер: " + list.size());
+
+        System.out.println(list.get(3));
 
     }
 
