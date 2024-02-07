@@ -1,65 +1,85 @@
 package linkedlist.core.impl;
 
 import linkedlist.GBLinkedL;
-import list.GBList;
 
-import java.util.LinkedList;
+public class GBLinkedList <T> implements GBLinkedL<Object> {
 
-public class GBLinkedList <T> implements GBLinkedL<T> {
-
+    private GBNode head;
+    private GBNode tail;
     private int size;
     private T[] values;
 
 
     public GBLinkedList() {
-        this.size = 0;
+        head = null;
+        tail = null;
+    }
 
-        try {
-            this.values = (T[]) new Object[size + 1];
-        } catch (ClassCastException e) {
-            e.printStackTrace();
+    private boolean isEmpty() {
+        return head == null;
+    }
+
+     @Override
+    public void addFirst(Object value) {
+
+        GBNode temp = new GBNode(value);
+
+        if(isEmpty()){
+            tail = temp;
+        }
+        else{
+            head.prev = temp;
         }
 
-    }
-
-
-    @Override
-    public void addFirst(T value) {
-
-        
-
+        temp.next = head;
+        head = temp;
         size++;
+//        values[size++] = value;
+    }
 
-        values[size++] = value;
+    public void print(){
+        GBNode temp = head;
 
-//        final LinkedList.Node<E> f = first;
-//        final LinkedList.Node<E> newNode = new LinkedList.Node<>(null, e, f);
-//        first = newNode;
-//        if (f == null)
-//            last = newNode;
-//        else
-//            f.prev = newNode;
-//        size++;
-//        modCount++;
+        while (temp != null){
+            System.out.println(temp.item);
+            temp = temp.next;
+        }
     }
 
     @Override
-    public void addLast(T value) {
+    public void addLast(Object value) {
+        GBNode temp = new GBNode(value);
 
-    }
-
-    @Override
-    public void add(int index, T value) {
-
+        if(isEmpty()){
+            head = temp;
+        } else {
+            tail.next = temp;
+        }
+        temp.prev = tail;
+        tail = temp;
+        size++;
     }
 
     @Override
     public int size() {
-        return 0;
+        return this.size;
     }
 
     @Override
     public T get(int index) {
-        return null;
+        if (index < 0 || index >= size){
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+        }
+
+        GBNode current = head;
+        int currentIndex = 0;
+
+        while (currentIndex < index) {
+            current = current.next;
+            currentIndex++;
+        }
+
+        return (T) current.item; //Не удалось вернуть элемент, IDE подсказала кастануть.
     }
+
 }

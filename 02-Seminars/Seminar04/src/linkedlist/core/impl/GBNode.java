@@ -1,16 +1,15 @@
 package linkedlist.core.impl;
 
+import org.w3c.dom.Node;
+
 //Для установки ссылок на предыдущий и следующий элементы LinkedList использует объекты своего вложенного класса Node:
 public class GBNode<E> {
     E item;
     GBNode<E> next;
     GBNode<E> prev;
 
-
-    public GBNode(E item, GBNode<E> next, GBNode<E> prev) {
+    public GBNode(E item) {
         this.item = item;
-        this.next = next;
-        this.prev = prev;
     }
 
     public E getItem() {
