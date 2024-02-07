@@ -43,7 +43,7 @@ public class GBLinkedList <T> implements GBLinkedL<Object> {
         int i = 0;
 
         while (temp != null){
-            System.out.println("идекс: " + i + " элемент: " + temp.item);
+            System.out.println("индекс: " + i + " элемент: " + temp.item);
             temp = temp.next;
             i++;
         }
