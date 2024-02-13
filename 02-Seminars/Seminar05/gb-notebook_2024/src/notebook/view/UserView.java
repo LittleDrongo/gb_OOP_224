@@ -54,12 +54,5 @@ public class UserView {
         System.out.print(message);
         return in.nextLine();
     }
-
-//    private User createUser() {
-//        String firstName = prompt("Имя: ");
-//        String lastName = prompt("Фамилия: ");
-//        String phone = prompt("Номер телефона: ");
-//        return new User(firstName, lastName, phone);
-//    }
 }
 
