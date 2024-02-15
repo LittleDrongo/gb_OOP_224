@@ -13,19 +13,22 @@ public class Characteristic {
     private String body;
     private String wheel;
 
-    public Characteristic(String brand, String color, String ram, String cpu, String os, String weight, String memory,
-                          String memoryType, String battery, String body, String wheel) {
-        this.brand = brand;
-        this.color = color;
-        this.ram = ram;
-        this.cpu = cpu;
+    private Characteristic(Builder builder) {
+        this.brand = builder.brand;
+        this.color = builder.color;
+        this.ram = builder.ram;
+        this.cpu = builder.cpu;
         this.os = os;
         this.weight = weight;
         this.memory = memory;
         this.memoryType = memoryType;
         this.battery = battery;
         this.body = body;
-        this.wheel = wheel;
+        this.wheel = builder.wheel;
+    }
+
+    public static Builder builder(){
+        return new Builder();
     }
 
     public String getBrand() {
@@ -72,6 +75,7 @@ public class Characteristic {
         return wheel;
     }
 
+
     @Override
     public String toString() {
         return "[" +
@@ -87,5 +91,47 @@ public class Characteristic {
                 ", body='" + body + '\'' +
                 ", wheel='" + wheel + '\'' +
                 ']';
+    }
+
+    public static class Builder {
+        private String brand;
+        private String color;
+        private String ram;
+        private String cpu;
+        private String os;
+        private String weight;
+        private String memory;
+        private String memoryType;
+        private String battery;
+        private String body;
+        private String wheel;
+
+        public Characteristic build(){
+            return new Characteristic(this);
+        }
+
+        public Builder color(String color){
+            this.color = color;
+            return this;
+        }
+
+        public Builder ram(String ram){
+            this.ram = ram;
+            return this;
+        }
+
+        public Builder cpu(String cpu){
+            this.cpu = cpu;
+            return this;
+        }
+
+        public Builder wheel(String wheel){
+            this.wheel = wheel;
+            return this;
+        }
+        public Builder brand(String brand){
+            this.brand = brand;
+            return this;
+        }
     }
 }
