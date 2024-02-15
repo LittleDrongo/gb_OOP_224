@@ -4,7 +4,7 @@ public class Characteristic {
     private String brand;
     private String color;
     private String ram;
-    private String cpu;
+    private int cpu;
     private String os;
     private String weight;
     private String memory;
@@ -43,7 +43,7 @@ public class Characteristic {
         return ram;
     }
 
-    public String getCpu() {
+    public int getCpu() {
         return cpu;
     }
 
@@ -97,7 +97,7 @@ public class Characteristic {
         private String brand;
         private String color;
         private String ram;
-        private String cpu;
+        private int cpu;
         private String os;
         private String weight;
         private String memory;
@@ -120,7 +120,7 @@ public class Characteristic {
             return this;
         }
 
-        public Builder cpu(String cpu){
+        public Builder cpu(int cpu){
             this.cpu = cpu;
             return this;
         }

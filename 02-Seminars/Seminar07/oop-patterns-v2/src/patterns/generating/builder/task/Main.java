@@ -14,6 +14,7 @@ public class Main {
                 .brand("Велики")
                 .wheel("Горные")
                 .color("Красный")
+//                .cpu(10) //Пример int
                 .build());
 
 //        Item bike = new Bike(
