@@ -8,6 +8,11 @@ import java.time.LocalDateTime;
 public class Video {
     private final LocalDateTime startTime;
     private final String name;
+
+    public String getName() {
+        return name;
+    }
+
     private final int duration;
 
     public Video(LocalDateTime startTime, String name, int duration) {
