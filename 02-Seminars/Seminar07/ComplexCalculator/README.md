@@ -8,15 +8,16 @@
 
 1. Далее если нажать на кнопку "Code" то можно будет найти раздел "Codespace"
 
-![1 шаг](gifs\how_to_1.gif "Шаг 1")
+![1 шаг](https://github.com/LittleDrongo/gb_OOP_224/blob/main/02-Seminars/Seminar07/ComplexCalculator/gifs/how_to_1.gif "Шаг 1")
+
 
 2. Далее придётся углубиться до папки с проектом и "Открыть во встроенном терминале"
 
-![2 шаг](gifs\how_to_2.gif "Шаг 2")
+![2 шаг](https://github.com/LittleDrongo/gb_OOP_224/blob/main/02-Seminars/Seminar07/ComplexCalculator/gifs/how_to_2.gif "Шаг 2")
 
 3. Ввести в терминал команду 
 ```bash
 go run main.go
 ```
 
-![2 шаг](gifs\how_to_3.gif "Шаг 3")
+![3 шаг](https://github.com/LittleDrongo/gb_OOP_224/blob/main/02-Seminars/Seminar07/ComplexCalculator/gifs/how_to_3.gif "Шаг 3")
