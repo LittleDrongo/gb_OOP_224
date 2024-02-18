@@ -8,9 +8,6 @@ import Calculator.impl.Subtraction;
 import java.util.HashMap;
 
 public class Calculator {
-    double num1;
-    char operator;
-    double num2;
 
 public double calculate (double num1, char operator, double num2) {
         HashMap<Character, Operation> operations = new HashMap<>();
