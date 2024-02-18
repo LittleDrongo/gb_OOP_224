@@ -11,16 +11,16 @@ func TestCalc(num1, num2 complex128, operator rune) {
 	switch operator {
 	case '+':
 		sum := num1 + num2
-		fmt.Printf("Результат %v\n", sum)
+		fmt.Printf("Сложение: %v\n", sum)
 	case '-':
 		sum := num1 - num2
-		fmt.Printf("Результат %v\n", sum)
+		fmt.Printf("Вычитание: %v\n", sum)
 	case '*':
 		sum := num1 * num2
-		fmt.Printf("Результат %v\n", sum)
+		fmt.Printf("Умножение: %v\n", sum)
 	case '/':
 		sum := num1 / num2
-		fmt.Printf("Результат %v\n", sum)
+		fmt.Printf("Деление: %v\n", sum)
 	}
 
 }

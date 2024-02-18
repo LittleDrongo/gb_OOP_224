@@ -18,7 +18,10 @@ public class ComplexNumber {
     }
 
     @Override
-    public String toString() {
+    public String toString() {if (imaginary >= 0) {
         return real + " + " + imaginary + "i";
+    } else {
+        return real + " - " + (-imaginary) + "i";
+    }
     }
 }

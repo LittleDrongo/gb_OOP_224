@@ -19,13 +19,14 @@ func main() {
 	fmt.Printf("Сумма: %s\n", sum.ToString())
 
 	sum2 := calculator.Multiply(num1, num2)
-	fmt.Printf("Сумма: %s\n", sum2.ToString())
+	fmt.Printf("Умножение: %s\n", sum2.ToString())
 
 	sum3 := calculator.Divide(num1, num2)
-	fmt.Printf("Сумма: %s\n", sum3.ToString())
+	fmt.Printf("Деление: %s\n", sum3.ToString())
 
 	fmt.Println("\n------/ Встроенные методы (для проверки) / --------  ")
 	test.TestCalc(3+2i, 1+4i, '+')
+	test.TestCalc(3+2i, 1+4i, '-')
 	test.TestCalc(3+2i, 1+4i, '*')
 	test.TestCalc(3+2i, 1+4i, '/')
 }
